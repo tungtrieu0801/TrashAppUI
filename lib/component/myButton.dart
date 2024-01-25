@@ -36,7 +36,7 @@ class MyButton extends StatelessWidget {
           children: [
             Image(
               image: imageProvider,
-              width: width * 0.3, // Điều chỉnh kích thước của ảnh theo nhu cầu
+              width: width * 0.3,
               height: height * 0.3,
             ),
             SizedBox(height: 8),

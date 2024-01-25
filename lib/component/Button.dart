@@ -32,14 +32,15 @@ class Button extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
         ),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.start, // Align children in the center
+          mainAxisAlignment: MainAxisAlignment.start,
+          // Align children in the center
           children: [
             Image(
               image: imageProvider,
               width: width * 0.4,
               height: height * 0.6,
             ),
-            SizedBox(width: 8), // Add some spacing between image and text
+            SizedBox(width: 8),
             Text(
               text,
               style: textStyle,

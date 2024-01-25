@@ -20,7 +20,8 @@ class _SupportScreenState extends State<SupportScreen> {
         iconTheme: IconThemeData(color: Colors.white),
         title: Text(
           "Hỗ trợ",
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
+          style: TextStyle(
+              fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
         ),
       ),
       body: Padding(
@@ -31,24 +32,25 @@ class _SupportScreenState extends State<SupportScreen> {
             // Text input
             ConstrainedBox(
               constraints: BoxConstraints(
-                minHeight: 400, // Set the minimum height
+                minHeight: 400,
               ),
               child: TextField(
                 controller: _textEditingController,
-                maxLines: 16, // Set the maximum number of lines
+                maxLines: 16,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: 'Mô tả vấn đề (ít nhất 30 kí tự)',
                   alignLabelWithHint: true,
                 ),
-                style: TextStyle(fontSize: 18), // Set the font size
+                style: TextStyle(fontSize: 18),
               ),
             ),
-            SizedBox(height: 20), // Add some spacing between text input and button
+            SizedBox(height: 20),
             // Send button
             ElevatedButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context)=> HomeScreen()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomeScreen()));
               },
               child: Text('Gửi'),
             ),

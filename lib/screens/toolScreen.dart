@@ -99,57 +99,75 @@ class ToolScreen extends StatelessWidget {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Column(
-            children: [
-              Text('Bạn có thích ứng dụng ',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
-              SizedBox(height: 7,),
-              Text("của chúng tôi không?",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold)),
-              SizedBox(height: 15,),
-              Text("Hãy cho chúng tôi biết",style: TextStyle(fontSize: 15),),
-              SizedBox(height: 6,),
-              Text("bằng cách xếp hạng 5 sao",style: TextStyle(fontSize: 15),),
-              SizedBox(height: 15,)
-            ],
-          ),
-          content: Container(
-            height: 100,
-            child: Column(
+            title: Column(
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    IconButton(
-                      icon: Icon(Icons.thumb_up),
-                      color: Colors.green,
-                      onPressed: () {
-                        // Xử lý khi người dùng chọn "Thích"
-                        Navigator.of(context).pop(); // Đóng popup
-                        // Gọi hàm hoặc chuyển đến màn hình thích nếu cần
-                      },
-                    ),
-                    IconButton(
-                      icon: Icon(Icons.thumb_down),
-                      color: Colors.red,
-                      onPressed: () {
-                        // Xử lý khi người dùng chọn "Không thích"
-                        Navigator.of(context).pop(); // Đóng popup
-                        // Gọi hàm hoặc chuyển đến màn hình không thích nếu cần
-                      },
-                    ),
-                  ],
+                Text(
+                  'Bạn có thích ứng dụng ',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: 34,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text("Xin cảm ơn!", style: TextStyle(fontSize: 12),)
-                  ],
+                SizedBox(
+                  height: 7,
+                ),
+                Text("của chúng tôi không?",
+                    style:
+                        TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                SizedBox(
+                  height: 15,
+                ),
+                Text(
+                  "Hãy cho chúng tôi biết",
+                  style: TextStyle(fontSize: 15),
+                ),
+                SizedBox(
+                  height: 6,
+                ),
+                Text(
+                  "bằng cách xếp hạng 5 sao",
+                  style: TextStyle(fontSize: 15),
+                ),
+                SizedBox(
+                  height: 15,
                 )
               ],
             ),
-          )
-
-        );
+            content: Container(
+              height: 100,
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      IconButton(
+                        icon: Icon(Icons.thumb_up),
+                        color: Colors.green,
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                      ),
+                      IconButton(
+                        icon: Icon(Icons.thumb_down),
+                        color: Colors.red,
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 34,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Xin cảm ơn!",
+                        style: TextStyle(fontSize: 12),
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ));
       },
     );
   }

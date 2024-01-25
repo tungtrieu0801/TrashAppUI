@@ -17,9 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   _navigateToHome() async {
-    await Future.delayed(Duration(milliseconds:2200)); // Chờ đợi 2 giây
-
-    // Chuyển hướng sang màn hình home
+    await Future.delayed(Duration(milliseconds: 2200));
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (context) => HomeScreen()),
@@ -30,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(top:18.0),
+        padding: const EdgeInsets.only(top: 18.0),
         child: Center(
           child: Lottie.asset('animation/splash.json', height: 500),
         ),
